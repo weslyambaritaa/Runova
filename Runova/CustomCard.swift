@@ -17,16 +17,19 @@ struct CustomCard: View {
                         .stroke(Color.abuMuda, lineWidth: 3)
                 )
             
-            HStack {
+            HStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: 5) {
                     Text(label)
                         .font(.caption)
                         .foregroundColor(textColor.opacity(0.7))
+                    
                     Text(content)
                         .bold()
                         .foregroundColor(textColor)
+                        .font(.title3)
                 }
                 .padding()
+                Spacer()
             }
         }
     }
